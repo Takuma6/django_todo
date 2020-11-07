@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>ToDoの詳細</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <td>{{ object.id }}</td>
+    </tr>
+    <tr>
+        <th>Large Class</th>
+        <td>{{ object.large_class }}</td>
+    </tr>
+    <tr>
+        <th>Middle Class</th>
+        <td>{{ object.middle_class }}</td>
+    </tr>
+    <tr>
+        <th>Small Class</th>
+        <td>{{ object.small_class }}</td>
+    </tr>
+    <tr>
+        <th>ToDo</th>
+        <td>{{ object.todo }}</td>
+    </tr>
+    <tr>
+        <th>Deadline</th>
+        <td>{{ object.deadline }}</td>
+    </tr>
+    <tr>
+        <th>作成日時</th>
+        <td>{{ object.created_at }}</td>
+    </tr>
+    <tr>
+        <th>更新日時</th>
+        <td>{{ object.updated_at }}</td>
+    </tr>
+</table>
+<a href="{% url 'todo:list' %}">戻る</a>
+{%endblock%}
